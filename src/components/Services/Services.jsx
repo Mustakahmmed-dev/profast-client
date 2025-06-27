@@ -42,9 +42,9 @@ const services = [
 
 const Services = () => {
     return (
-        <section className="py-12 px-4 md:px-8 lg:px-16">
-            <h2 className="text-3xl font-bold text-center mb-5">Our Services</h2>
-            <p className='text-gray-600 text-center md:mx-14 mb-5'>At ProFast, we are committed to delivering your parcels with speed, reliability, and care. Whether it's same-day delivery within major cities or nationwide logistics solutions, our wide range of services ensures your business runs smoothly and your customers stay happy. From express shipping to fulfillment, corporate logistics, and hassle-free returns — we've got you covered every step of the way.</p>
+        <section className="py-12 px-4 md:px-8 lg:px-16 bg-[#03373D] rounded-xl p-4">
+            <h2 className="text-3xl font-bold text-center mb-5 text-white">Our Services</h2>
+            <p className='text-white text-center md:mx-14 mb-5'>At ProFast, we are committed to delivering your parcels with speed, reliability, and care. Whether it's same-day delivery within major cities or nationwide logistics solutions, our wide range of services ensures your business runs smoothly and your customers stay happy. From express shipping to fulfillment, corporate logistics, and hassle-free returns — we've got you covered every step of the way.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     services.map((service, index) => <ServiceCard key={index} service={service} />)

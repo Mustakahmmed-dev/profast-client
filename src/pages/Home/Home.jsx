@@ -6,8 +6,11 @@ const Home = () => {
     return(
         <div>
             <Banner />
+            <div className="w-12/13 mx-auto space-y-10 mb-10">
             <HowItWorks />
             <Services />
+            
+            </div>
         </div>
     )
 }

@@ -7,9 +7,9 @@ const Footer = () => {
     return (
         <footer className="footer footer-horizontal footer-center bg-neutral text-primary-content p-10">
             <aside>
-                <div className="relative">
+                <div className="flex items-center">
                     <img className="w-[80px] rounded-full" src={profastLogo} alt="" />
-                    <h2 className="text-2xl font-bold absolute top-11 left-14">ProFast</h2>
+                    <h2 className="text-3xl font-bold -ml-8 mt-5">ProFast</h2>
                 </div>
                 <p className="font-bold">
                     Providing reliable logistics since 2025
