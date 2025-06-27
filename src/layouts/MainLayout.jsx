@@ -7,7 +7,6 @@ const MainLayout = () => {
         <div>
             <Navbar />
 
-            Home contents changeable on requests
             <Outlet />
 
             <Footer />
