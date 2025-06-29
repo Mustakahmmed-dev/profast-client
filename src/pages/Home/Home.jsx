@@ -3,6 +3,7 @@ import BecomeMerchant from "../../components/BecomeMerchant"
 import Benefits from "../../components/Benefits"
 import HowItWorks from "../../components/HowItWorks"
 import Services from "../../components/Services/Services"
+import Testimonials from "../../components/Testimonials/Testimonials"
 import TrustedByClients from "../../components/TrustedByClients"
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <TrustedByClients />
             <Benefits />
             <BecomeMerchant />
+            <Testimonials />
             </div>
         </div>
     )

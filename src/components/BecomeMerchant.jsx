@@ -4,9 +4,7 @@ import merchantLocation from '../assets/location-merchant.png'
 
 const BecomeMerchant = () => {
     return(
-        <div className="p-10 mx-10 rounded-lg border bg-[#03373D] bg-cover bg-center flex items-center " style={{backgroundImage: `url(${merchantBg})`}}>
-            {/* <img src={merchantBg} alt="" /> */}
-            {/* <img src={merchantLocation} alt="" /> */}
+        <div className="p-10 mx-10 rounded-lg bg-[#03373D] bg-cover bg-center flex items-center " style={{backgroundImage: `url(${merchantBg})`}}>
             <div className='space-y-4 text-white'>
                 <h2 className='text-2xl font-bold'>Merchant and Customer Satisfaction is Our First Priority</h2>
                 <p className='text-gray-300'>Lorem ipsum, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, nam. dolor sit amet consectetur adipisicing elit. Omnis beatae vitae, cupiditate quidem architecto facilis.</p>
