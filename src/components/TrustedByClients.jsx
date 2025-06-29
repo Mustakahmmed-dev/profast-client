@@ -8,7 +8,7 @@ import amazonVector from '../assets/brands/amazon_vector.png';
 
 const TrustedByClients = () => {
     return (
-        <div className="py-10 bg-white">
+        <div className="p-10 md:mx-10 rounded-lg bg-white">
             <h1 className="text-3xl font-bold text-center mb-6">Trusted By</h1>
             <marquee behavior="scroll" direction="left" scrollamount="5">
                 <div className="flex gap-12 items-center">

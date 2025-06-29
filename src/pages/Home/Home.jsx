@@ -1,4 +1,5 @@
 import Banner from "../../components/Banner"
+import Benefits from "../../components/Benefits"
 import HowItWorks from "../../components/HowItWorks"
 import Services from "../../components/Services/Services"
 import TrustedByClients from "../../components/TrustedByClients"
@@ -11,6 +12,7 @@ const Home = () => {
             <HowItWorks />
             <Services />
             <TrustedByClients />
+            <Benefits />
             </div>
         </div>
     )
