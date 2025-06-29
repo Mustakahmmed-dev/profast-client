@@ -1,4 +1,5 @@
 import Banner from "../../components/Banner"
+import BecomeMerchant from "../../components/BecomeMerchant"
 import Benefits from "../../components/Benefits"
 import HowItWorks from "../../components/HowItWorks"
 import Services from "../../components/Services/Services"
@@ -13,6 +14,7 @@ const Home = () => {
             <Services />
             <TrustedByClients />
             <Benefits />
+            <BecomeMerchant />
             </div>
         </div>
     )
