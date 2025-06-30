@@ -1,6 +1,7 @@
 import Banner from "../../components/Banner"
 import BecomeMerchant from "../../components/BecomeMerchant"
 import Benefits from "../../components/Benefits"
+import FAQ from "../../components/FAQ"
 import HowItWorks from "../../components/HowItWorks"
 import Services from "../../components/Services/Services"
 import Testimonials from "../../components/Testimonials/Testimonials"
@@ -17,6 +18,7 @@ const Home = () => {
             <Benefits />
             <BecomeMerchant />
             <Testimonials />
+            <FAQ />
             </div>
         </div>
     )
