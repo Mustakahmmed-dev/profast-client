@@ -1,7 +1,14 @@
+import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Login = () => {
+    const {register, handleSubmit } = useForm();
+
+    const onSubmit = data => {
+        console.log(data);
+    }
+
     return (
         <div className="card w-full bg-base-100 shadow-2xl">
             <div className="px-4 pt-4">
@@ -10,17 +17,21 @@ const Login = () => {
             </div>
 
             <div className="card-body">
-                <fieldset className="fieldset">
+               <form onSubmit={handleSubmit(onSubmit)}>
+                 <fieldset className="fieldset">
                     <label className="label">Email</label>
-                    <input type="email" className="input" placeholder="Email" />
+                    <input type="email" {...register("email")} className="input w-full" placeholder="Email" />
+
                     <label className="label">Password</label>
-                    <input type="password" className="input" placeholder="Password" />
+                    <input type="password" {...register("password", {required: true, minLength: 6})} className="input w-full" placeholder="Password" />
+                    
                     <div><a className="link link-hover">Forgot password?</a></div>
-                    <button className="btn mt-4 bg-[#CAEB66]">Login</button>
-                    <p>Don't have an account, please <Link to="/register" className="text-blue-500 font-bold underline"> Register </Link> </p>
+                    <button type="submit" className="btn mt-4 bg-[#CAEB66]">Login</button>
+                    <p className="text-center border">Don't have an account, please <Link to="/register" className="text-blue-500 font-bold underline"> Register </Link> </p>
                     <p className="text-center">Or</p>
                     <button className="btn "> <FaGoogle size={28}/> Login with Google</button>
                 </fieldset>
+               </form>
             </div>
         </div>
     )
