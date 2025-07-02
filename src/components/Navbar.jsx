@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router";
 import profastLogo from '../assets/logo.png';
+import UseAuth from "../hooks/useAuth";
 
 const Navbar = () => {
     const links = <>
@@ -10,6 +11,8 @@ const Navbar = () => {
         <li> <NavLink>Pricing</NavLink> </li>
         <li> <NavLink>Be a Rider</NavLink> </li>
     </>
+    const { user, logOut } = UseAuth();
+
     return (
         <div className="navbar bg-white shadow-sm p-4 w-12/13 mx-auto mb-3">
             <div className="navbar-start">
@@ -34,8 +37,15 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-               <Link to="/login" className="btn ">Sign In</Link>
-               <Link to="/be-a-rider" className="btn bg-[#CAEB66]">Be a Rider</Link>
+                {user ? <div className="flex items-center gap-1">
+                    <img className="rounded-full w-[60px]" src={user.photoURL} alt="Photo error" />
+                    <button onClick={logOut} className="btn btn-neutral">Log Out</button>
+                </div> : <div>
+                    <Link to="/login" className="btn ">Sign In</Link>
+                    <Link to="/be-a-rider" className="btn bg-[#CAEB66]">Be a Rider</Link>
+                </div>
+                }
+
             </div>
         </div>
     )

@@ -1,10 +1,10 @@
-import { FaQuoteLeft } from "react-icons/fa";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const TestimonialCard = ({ detail }) => {
     const { name, role, text } = detail;
     return (
         <div className="w-[450px] mx-auto rounded-lg bg-slate-100 p-5">
-            <faQuoteLeft />
+            <FaQuoteRight />
             <p> {text} </p>
             <div className="border my-5 border-dashed border-gray-300"></div>
 
