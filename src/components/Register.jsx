@@ -1,12 +1,18 @@
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
+import UseAuth from "../hooks/useAuth";
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const {createUser} = UseAuth();
 
     const onSubmit = data => {
         console.log(data);
+        createUser(data.email, data.password)
+        .then(result => {
+            console.log(result)
+        }).catch(error => console.log(error))
     }
 
     return (
