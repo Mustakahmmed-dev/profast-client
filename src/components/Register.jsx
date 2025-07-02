@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
 import UseAuth from "../hooks/useAuth";
+import SocialLogin from "../pages/Home/SocialLogin";
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -50,7 +50,7 @@ const Register = () => {
                         <button type="submit" className="btn mt-4 bg-[#CAEB66]">Register</button>
                         <p>Have an account, please <Link to="/login" className="text-blue-500 font-bold underline"> Login </Link> </p>
                         <p className="text-center">Or</p>
-                        <button className="btn "> <FaGoogle size={28} /> Register with Google</button>
+                        <SocialLogin />
                     </fieldset>
                 </form>
             </div>
