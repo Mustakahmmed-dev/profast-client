@@ -4,3 +4,7 @@
 body{
     background-color: #e2e8f0;
 }
+.active{
+    background-color: #CAEB66;
+    font-weight: 600;
+}

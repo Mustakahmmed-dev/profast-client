@@ -1,15 +1,16 @@
 import { Link, NavLink } from "react-router";
 import profastLogo from '../assets/logo.png';
 import UseAuth from "../hooks/useAuth";
+import ProfastLogo from "./ProfastLogo";
 
 const Navbar = () => {
     const links = <>
-        <li> <NavLink>Home</NavLink> </li>
-        <li> <NavLink>About Us</NavLink> </li>
-        <li> <NavLink>Services</NavLink> </li>
-        <li> <NavLink>Coverage</NavLink> </li>
-        <li> <NavLink>Pricing</NavLink> </li>
-        <li> <NavLink>Be a Rider</NavLink> </li>
+        <li> <NavLink to="/">Home</NavLink> </li>
+        <li> <NavLink to="/about-us">About Us</NavLink> </li>
+        <li> <NavLink to="/services">Services</NavLink> </li>
+        <li> <NavLink to="/coverage">Coverage</NavLink> </li>
+        <li> <NavLink to="/pricing">Pricing</NavLink> </li>
+        <li> <NavLink to="be-a-rider">Be a Rider</NavLink> </li>
     </>
     const { user, logOut } = UseAuth();
 
@@ -26,10 +27,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="flex items-center">
-                    <img className="w-[40px] rounded-full" src={profastLogo} alt="" />
-                    <h2 className="text-xl font-bold -ml-2">ProFast</h2>
-                </div>
+               <ProfastLogo></ProfastLogo>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-gray-600">
