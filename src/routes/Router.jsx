@@ -6,6 +6,8 @@ import Login from "../pages/Home/Login";
 import Register from "../components/Register";
 import Coverage from "../pages/Coverage";
 import Error from "../pages/Error";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import SendParcel from "../pages/SendParcel";
 
 export const Router = createBrowserRouter([
     {
@@ -20,6 +22,12 @@ export const Router = createBrowserRouter([
             {
                 path: "coverage",
                 Component: Coverage
+            },
+            {
+                path: "pricing",
+                element: <PrivateRoute>
+                    <SendParcel></SendParcel>
+                </PrivateRoute>
             }
         ]
     },
