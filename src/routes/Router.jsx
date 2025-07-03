@@ -5,11 +5,13 @@ import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Home/Login";
 import Register from "../components/Register";
 import Coverage from "../pages/Coverage";
+import Error from "../pages/Error";
 
 export const Router = createBrowserRouter([
     {
         path: "/",
         Component: MainLayout,
+        errorElement: <Error></Error>,
         children: [
             {
                 index: true,
