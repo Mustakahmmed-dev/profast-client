@@ -4,12 +4,13 @@ import UseAuth from "../hooks/useAuth";
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = UseAuth();
+    console.log(user)
 
     if (loading) {
-        <Loader />
+        return <Loader />
     }
     if (!user) {
-        <Navigate to="/login"></Navigate>
+       return <Navigate to="/login"></Navigate>
     }
 
     return children;

@@ -1,8 +1,8 @@
 
 const Loader = () => {
     return(
-        <div className="loading loading-lg loading-dots">
-
+        <div className="h-[50vh] flex justify-center items-center">
+        <div className="loading loading-xl loading-dots"></div>
         </div>
     )
 }

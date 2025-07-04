@@ -1,7 +1,19 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const regions = ["Ukhia", "Teknaf", "Cox's Bazar", "Dhaka", "Chittagong"];
+const regions = [
+  "Bagerhat", "Bandarban", "Barguna", "Barisal", "Bhola", "Bogura", "Brahmanbaria",
+  "Chandpur", "Chapai Nawabganj", "Chattogram", "Chuadanga", "Cox's Bazar", "Cumilla",
+  "Dhaka", "Dinajpur", "Faridpur", "Feni", "Gaibandha", "Gazipur", "Gopalganj",
+  "Habiganj", "Jamalpur", "Jashore", "Jhalokathi", "Jhenaidah", "Joypurhat",
+  "Khagrachari", "Khulna", "Kishoreganj", "Kurigram", "Kushtia", "Lakshmipur",
+  "Lalmonirhat", "Madaripur", "Magura", "Manikganj", "Meherpur", "Moulvibazar",
+  "Munshiganj", "Mymensingh", "Naogaon", "Narail", "Narayanganj", "Narsingdi",
+  "Natore", "Netrokona", "Nilphamari", "Noakhali", "Pabna", "Panchagarh",
+  "Patuakhali", "Pirojpur", "Rajbari", "Rajshahi", "Rangamati", "Rangpur",
+  "Satkhira", "Shariatpur", "Sherpur", "Sirajganj", "Sunamganj", "Sylhet",
+  "Tangail", "Thakurgaon"
+];
 
 const SendParcel = () => {
   const {
@@ -71,6 +83,10 @@ const SendParcel = () => {
           </div>
         </div>
 
+        {/* Sender details */}
+        <div>
+          <h2 className="text-xl font-bold text-gray-600">Sender Details</h2>
+        </div>
         {/* Email */}
         <div>
           <label className="label">Email Address</label>
@@ -116,9 +132,9 @@ const SendParcel = () => {
                 {...register("senderRegion", { required: true })}
                 className="select select-bordered w-full"
               >
-                <option disabled selected>
+                {/* <option disabled selected>
                   Select your region
-                </option>
+                </option> */}
                 {regions.map((region) => (
                   <option key={region}>{region}</option>
                 ))}
@@ -136,6 +152,9 @@ const SendParcel = () => {
         </div>
 
         {/* Receiver Details */}
+        <div>
+          <h2 className="text-xl font-bold text-gray-600">Receiver Details</h2>
+        </div>
         <div className="card bg-base-100 shadow-md">
           <div className="card-body grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -168,9 +187,9 @@ const SendParcel = () => {
                 {...register("receiverRegion", { required: true })}
                 className="select select-bordered w-full"
               >
-                <option disabled selected>
+                {/* <option disabled selected>
                   Select your region
-                </option>
+                </option> */}
                 {regions.map((region) => (
                   <option key={region}>{region}</option>
                 ))}
