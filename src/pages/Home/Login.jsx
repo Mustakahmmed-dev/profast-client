@@ -1,18 +1,23 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import SocialLogin from "./SocialLogin";
 import UseAuth from "../../hooks/useAuth";
+import { toast } from "react-toastify";
 
 const Login = () => {
     const {register, handleSubmit } = useForm();
     const {signInUser} = UseAuth();
+    const location = useLocation();
+    const navigate = useNavigate();
+    // console.log(location)
 
     const onSubmit = data => {
         console.log(data);
         signInUser(data.email, data.password)
         .then(result => {
-            console.log("Login successful ", result)
-        }).catch(error => console.log(error))
+            toast.success("Login successful!");
+            navigate(location.state)
+        }).catch(error => toast.error(error.message))
     }
 
     return (
